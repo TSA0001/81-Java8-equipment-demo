@@ -1,0 +1,7 @@
+target/
+.DS_Store
+.idea/
+*.iml
+.vscode/
+README.md.tmp-edit
+README.md.bak-20260817

@@ -1,0 +1,17 @@
+services:
+  equipment-app:
+    build:
+      context: .
+      dockerfile: Containerfile
+    container_name: equipment-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - equipment-db:/data/h2
+    environment:
+      TZ: Asia/Tokyo
+      DB_PATH: /data/h2/equipment
+    restart: unless-stopped
+
+volumes:
+  equipment-db:
